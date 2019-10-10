@@ -1,0 +1,40 @@
+import random
+#vel = random.Random()
+
+print("Kerlek adj meg 2 szamot hogy melyik intervallumban keressek!")
+a = int(input("Kerem az elso szamot!:"))
+b = int(input("Kerem a masodik szamot!:"))
+
+print("Az altalad megadott intervallum",a, " es ",b,"kozott van!")
+
+
+szam = random.randrange(a,b)
+#sztipp = random.randrange(a,b)
+tippszam = 0
+
+while True:
+    
+   
+    sztipp = random.randrange(a,b)
+    
+    
+    if sztipp < szam:
+        tippszam += 1
+        print("A tippem ",sztipp," kisebb mint a szam")
+        a = sztipp
+       
+       
+      
+    elif sztipp > szam:
+        tippszam += 1
+        print("A tippem ",sztipp," nagyobb mint a szam")
+        b = sztipp
+     
+    else:
+        tippszam += 1
+        
+
+        print("A szam",szam,"volt")
+        print("Nagyszeru kitalaltam ",tippszam," lepesbol")
+        break
+
